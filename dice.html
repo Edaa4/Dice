@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function roll(){
+            dice1 = document.getElementById("val1");
+            dice2 = document.getElementById("val2");
+            total = document.getElementById("totalVal");
+        }
+
+        function clickResponse(){
+            val1 = Math.round(Math.random() * (5) + 1);
+            val2 = Math.round(Math.random() * (5) + 1);
+            dice1.innerHTML = val1;
+            dice2.innerHTML = val2;
+            total.innerHTML = val1 + val2;
+        }
+
+    </script>
+</head>
+<body onload="roll();">
+    <button onclick="clickResponse();">Roll for dice!</button>
+    <p>Dice 1: <span id="val1"> 0 </span></p>
+    <p>Dice 2: <span id="val2"> 0 </span></p>
+    <p>Total: <span id="totalVal"> 0 </span></p>
+</body>
+</html>
